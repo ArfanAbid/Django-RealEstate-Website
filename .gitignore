@@ -1,0 +1,23 @@
+# Database files
+db.sqlite3
+
+# Virtual environment
+venv/
+.env
+env/
+
+# Environment variables file
+.env
+
+
+
+# Caches
+__pycache__/
+*.pyc
+
+# Ignore .env file containing sensitive credentials
+.env
+
+
+# Ignore SQLite database
+*.sqlite3

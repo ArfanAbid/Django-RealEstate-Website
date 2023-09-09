@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Latif Group</title>
+    <link rel="stylesheet" href="/static/CSS/contact.css">
+    <link rel="stylesheet" href="/static/CSS/utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="/static/images/img 5.jpg" alt="logo"></div>
+            <ul>
+                <li><a href="/"><i class="fa fa-home"></i> <b>Home</b> </a></li>
+                <li><a href="/about-us"><b>About Us</b></a></li>
+                <!-- <li><a href="our projects.html"><b>Our Projects</b></a></li> -->
+                <li><a href="/contact-us"><b>Contact Us</b></a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <hR color="grey" size="5px">
+    </hR>
+    <main style="height: 109vh;">
+        <div class="head">
+            <h1>Head Office</h1>
+            <br><br>
+            <h2> <u> Latif</u> Group</h2>
+        </div>
+        <div class="p">
+            <i class="fa fa-map-marker"></i>Office # 1nd & 2rd Floor Plaza No 38, Ali Town commercial,Adyala Road
+            Rawalpindi
+            Phase 7 Rawalpindi
+            <br><br>
+            <i class="fa fa-phone-square"></i>Phone: +92 308763213
+            <br><br>
+            <i class="fa fa-envelope-square"></i>info@Latifgroup.com
+            <br><br>
+            <a href="/">www.Latifgroup.com</a>
+            <br><br>
+        </div>
+
+
+        {% if messages %}
+        <div
+            style=" max-width: 500px;margin: 10px 42px;font-family: 'Montserrat', sans-serif;background-color: #d7f8f1; color: #0b0909; border: 1px solid #675e5e; padding: 10px; text-align: center; margin-top: 10px; border-radius: 5px;">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+
+            {% endif %}
+        </div>
+
+        <div
+            style="max-width: 500px; margin: 2px 50px;background-color: rgb(189, 213, 237); box-shadow: 0px 0px 10px 2px rgb(203, 203, 203);border-radius: 10px; ">
+            <h2 style="text-align: center;color:rgb(0, 0, 0);font-family: 'Montserrat', sans-serif;">Contact Us</h2>
+            <hr>
+            <form style="border: 1px solid #ccc; padding: 20px;" method="post">
+                {% csrf_token %}
+
+                {% if error %}
+
+                <div
+                    style="font-family: 'Montserrat', sans-serif;background-color: #f49099; color: #721c24; border: 1px solid #f5c6cb; padding: 10px; text-align: center; margin-top: 10px; border-radius: 10px;">
+                    Fill out the Form properly !!!
+                </div>
+
+
+
+                {% endif %}
+
+                <label for="name"
+                    style="display: block; margin-bottom: 10px;font-family: 'Montserrat', sans-serif;">Name:</label>
+                <input type="text" id="name" name="name"
+                    style="width: 95%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;border-radius: 10px;">
+
+                <label for="email"
+                    style="display: block; margin-bottom: 10px;font-family: 'Montserrat', sans-serif;">Email:</label>
+                <input type="email" id="email" name="email"
+                    style="width: 95%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;border-radius: 10px;">
+
+                <label for="comment"
+                    style="display: block; margin-bottom: 10px;font-family: 'Montserrat', sans-serif;">Comment:</label>
+                <textarea id="comment" name="comment"
+                    style="width: 95%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;border-radius: 10px;"></textarea>
+
+                <button type="submit"
+                    style=" border-radius: 10px;background-color:rgb(7, 7, 174);; color: white; padding: 10px 20px; border: none; cursor: pointer;font-family: 'Montserrat', sans-serif;">Submit</button>
+            </form>
+        </div>
+
+
+
+
+
+        <div class="lasts">
+
+
+
+            <div class="end">
+
+                <div class="end-logo">
+                    <img src="/static/images/img 2.jpg" alt="" width="450px" height="275px">
+                    <div class="discription">
+                        <p>
+                            Latif Group Consultants is a growing real estate company in Islamabad Pakistan. It is among
+                            the
+                            topmost trustful realtors in the market. Our Head office in Rawalpindi Bahria town and
+                            Corporate
+                            Office in Lahore, and Peshawar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="end-logo">
+                    <h3> <u>LINKS </u></h3>
+
+
+                    <div class="my-3">
+                        <ul>
+                            <li class="text"><a href="/"><i class="fa fa-home"></i> Home</a> </li>
+                            <li class="text"><a href="/about-us">About</a> </li>
+                            <li class="text"><a href="/contact-us"> Contact</a> </li>
+                        </ul>
+                    </div>
+                    <h3> <u>SOCIAL </u></h3>
+                    <div class="social">
+                        <i class="fa fa-facebook-square"></i>
+                        <a href="https://www.linkedin.com/in/arfan-abid-152217270/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+
+                    </div>
+                </div>
+                <div class="end-logo">
+                    <h3><u>Contact Information:</u></h3>
+                    <div class="my-4">
+                        <p>
+                            <i class="fa fa-map-marker"></i> Office # 1nd & 2rd Floor Plaza No 38, Ali Town
+                            commercial,Adyala Road Rawalpindi
+                        </p>
+                        <p>
+
+                            <i class="fa fa-phone-square"></i> Phone: +92 3030761309
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope-square"></i> info@Latifgroup.com
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+        <footer class="flex-All-center">
+            <p> Copyright&copy;2018-All rights reserved.Developed by<a href="/"> Latif Group </a> <i
+                    class="fa fa-spinner fa-spin"></i> </p>
+        </footer>
+
+</body>
+
+</html>
