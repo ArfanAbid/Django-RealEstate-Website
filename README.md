@@ -23,7 +23,7 @@ Contact Page:
    git clone https://github.com/ArfanAbid/Django-RealEstate-Website.git
 
 2. Navigate to project directory:
-    `cd core`
+    
    
 3. Create and activate Virtual Environment:
    `python -m venv venv` then
